@@ -162,9 +162,9 @@
         }
 
         function footer_link(texto) {
-            var li = document.createElement('li');
+            let li = document.createElement('li');
             li.className = 'list-inline-item';
-            var a = document.createElement('a');
+            let a = document.createElement('a');
             a.href = '#';
             a.appendChild(document.createTextNode(texto));
             li.appendChild(a);
@@ -173,14 +173,14 @@
         }
 
         function footer() {
-            var footer = document.createElement('footer');
+            let footer = document.createElement('footer');
             footer.className = 'my-5 pt-5 text-muted text-center text-small';
-            var p = document.createElement('p');
+            let p = document.createElement('p');
             p.className = 'mb-1';
             p.appendChild(document.createTextNode('2017-2019 Company Name'));
             footer.appendChild(p);
 
-            var ul = document.createElement('ul');
+            let ul = document.createElement('ul');
             ul.className = 'list-inline';
             ul.appendChild(footer_link('Privacy'));
             ul.appendChild(footer_link('Terms'));
@@ -190,14 +190,14 @@
             return footer;
         }
 
-        var body = document.getElementsByTagName('body')[0];
+        let body = document.getElementsByTagName('body')[0];
         body.className = 'bg-light';
-        var container = document.createElement('div');
+        let container = document.createElement('div');
         container.className = 'container';
         body.appendChild(container);
         container.appendChild(header());
         container.appendChild(billing());
-        var row = document.createElement('div');
+        let row = document.createElement('div');
         row.className = 'row';
         container.appendChild(row);
         row.appendChild(cart());
